@@ -18,6 +18,7 @@ if (isset($_POST["std_form"])) {
     mysqli_close($conn);
     if (isset($result)) {
         $_SESSION["msj"] = "Record Inserted Successfully";
+        mysqli_close($conn);
         header("location:index.php");
     } else {
         $_SESSION["msj"] = "Error: " . $sql . "<br />" . mysqli_error($conn);
