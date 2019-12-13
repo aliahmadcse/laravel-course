@@ -80,6 +80,7 @@ if (isset($_SESSION["msj"])) {
         </tr>
       </table>
     </form>
+    <a href="records.php">Records</a>
   </center>
 </body>
 
