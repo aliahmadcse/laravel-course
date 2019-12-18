@@ -4,6 +4,10 @@ if (isset($_SESSION["msj_edit"])) {
     echo $_SESSION["msj_edit"];
     unset($_SESSION["msj_edit"]);
 }
+if (isset($_SESSION["msj"])) {
+    echo $_SESSION["msj"];
+    unset($_SESSION["msj"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +53,7 @@ if (isset($_SESSION["msj_edit"])) {
                         </tr>
 
                 <?php }
-                                                } ?>
+                } ?>
 
             </tbody>
         </table>

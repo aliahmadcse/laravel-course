@@ -32,7 +32,7 @@ if (isset($_GET["sid"])) {
                                 Student Full Name
                             </td>
                             <td>
-                                <input type="text" name="name" value="<?= $row["std_name"]?>" />
+                                <input type="text" name="name" value="<?= $row["std_name"] ?>" />
                             </td>
                         </tr>
                         <tr>
@@ -40,7 +40,7 @@ if (isset($_GET["sid"])) {
                                 Father Name
                             </td>
                             <td>
-                                <input type="text" name="fatherName" />
+                                <input type="text" name="fatherName" value="<?= $row["std_father_name"] ?>" />
                             </td>
                         </tr>
                         <tr>
@@ -48,7 +48,7 @@ if (isset($_GET["sid"])) {
                                 Email Name
                             </td>
                             <td>
-                                <input type="email" name="email" />
+                                <input type="email" name="email" value="<?= $row["std_email"] ?>" />
                             </td>
                         </tr>
                         <tr>
@@ -56,7 +56,7 @@ if (isset($_GET["sid"])) {
                                 Mobile Number
                             </td>
                             <td>
-                                <input type="number" name="phone" />
+                                <input type="number" name="phone" value="<?= $row["std_mobile_number"] ?>" />
                             </td>
                         </tr>
                         <tr>
@@ -64,9 +64,9 @@ if (isset($_GET["sid"])) {
                                 Gender
                             </td>
                             <td>
-                                Male<input type="radio" name="gender" value="male" />
-                                Female<input type="radio" name="gender" value="female" />
-                                Others<input type="radio" name="gender" value="others" />
+                                Male<input type="radio" name="gender" value="male" <?php if ($row["std_gender"] == "male") { ?> checked <?php } ?> />
+                                Female<input type="radio" name="gender" value="female" <?php if ($row["std_gender"] == "female") { ?>checked <?php } ?> />
+                                Others<input type="radio" name="gender" value="others" <?php if ($row["std_gender"] == "others") { ?>checked <?php } ?> />
                             </td>
                         </tr>
                         <tr>
@@ -76,10 +76,15 @@ if (isset($_GET["sid"])) {
                             <td>
                                 <select name="country">
                                     <option value="null" selected disabled>Select one option</option>
-                                    <option value="pakistan">Pakistan</option>
-                                    <option value="china">China</option>
-                                    <option value="turky">Turky</option>
+                                    <option value="pakistan" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>Pakistan</option>
+                                    <option value="china" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>China</option>
+                                    <option value="turky" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>Turky</option>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="hidden" name="sid" value="<?php echo $sid; ?>">
                             </td>
                         </tr>
                         <tr>
