@@ -49,7 +49,7 @@ if (isset($_SESSION["msj"])) {
                             <td><?= $row["std_gender"] ?></td>
                             <td><?= $row["std_country"] ?></td>
                             <td><?= $row["std_mobile_number"] ?></td>
-                            <td><a href="edit.php?sid=<?php echo $row["std_id"]; ?>">Edit</a> |
+                            <td><a href="edit.php?sid=<?= $row["std_id"]; ?>">Edit</a> |
                                 <a href="process_delete.php?sid=<?= $row["std_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
                             </td>
                         </tr>
