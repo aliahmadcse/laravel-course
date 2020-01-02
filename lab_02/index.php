@@ -10,7 +10,7 @@ if (isset($_SESSION["msj"])) {
 <html>
 
 <head>
-  <title>Second page</title>
+  <title>Registration Form</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ if (isset($_SESSION["msj"])) {
             Father Name
           </td>
           <td>
-            <input type="text" name="fatherName" />
+            <input type="text" name="father_name" />
           </td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@ if (isset($_SESSION["msj"])) {
             Mobile Number
           </td>
           <td>
-            <input type="number" name="phone" />
+            <input type="number" name="mobile_number" />
           </td>
         </tr>
         <tr>
@@ -75,7 +75,7 @@ if (isset($_SESSION["msj"])) {
         </tr>
         <tr>
           <td colspan="2">
-            <input type="submit" value="Enter" name="std_form" />
+            <input type="submit" value="Enter" name="student_form" />
           </td>
         </tr>
       </table>
