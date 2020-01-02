@@ -4,7 +4,10 @@ if (isset($_SESSION["error_password"])) {
     echo $_SESSION["error_password"];
     unset($_SESSION["error_password"]);
 }
-
+if (isset($_SESSION["email_error"])) {
+    echo $_SESSION["email_error"];
+    unset($_SESSION["email_error"]);
+}
 ?>
 
 <!DOCTYPE html>
