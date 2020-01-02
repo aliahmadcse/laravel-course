@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
+    header("location:login.php");
+}
 if (isset($_SESSION["msj_edit"])) {
     echo $_SESSION["msj_edit"];
     unset($_SESSION["msj_edit"]);

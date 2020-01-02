@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-
+if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
+    header("location:login.php");
+}
 if (isset($_POST["sid"])) {
     require_once "db.php";
     $name = $_POST["name"];

@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
+  header("location:login.php");
+}
+
 if (isset($_SESSION["msj"])) {
   echo $_SESSION["msj"];
   unset($_SESSION["msj"]);
@@ -80,7 +84,8 @@ if (isset($_SESSION["msj"])) {
         </tr>
       </table>
     </form>
-    <a href="records.php">Records</a>
+    <a href="records.php">Records</a>|
+    <a href="process_logout.php">Logout</a>
   </center>
 </body>
 

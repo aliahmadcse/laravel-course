@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
+    header("location:login.php");
+  }
 if (isset($_GET["sid"])) {
     require_once "db.php";
     $sid = $_GET["sid"];

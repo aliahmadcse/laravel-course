@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
+    header("location:login.php");
+}
 if (isset($_POST["student_form"])) {
     require_once "db.php";
     foreach ($_POST as $key => $value) {
