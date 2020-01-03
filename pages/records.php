@@ -39,7 +39,7 @@ if (isset($_SESSION["msj"])) {
                     <th>Action</th>
                 </tr>
                 <?php
-                require "db.php";
+                require "../shared/db.php";
                 $query = "SELECT * FROM students";
                 $qry_result = mysqli_query($conn, $query);
                 if (isset($qry_result) && $qry_result != "") {
@@ -53,7 +53,7 @@ if (isset($_SESSION["msj"])) {
                             <td><?= $row["std_country"] ?></td>
                             <td><?= $row["std_mobile_number"] ?></td>
                             <td><a href="edit.php?sid=<?= $row["std_id"]; ?>">Edit</a> |
-                                <a href="process_delete.php?sid=<?= $row["std_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+                                <a href="../process/process_delete.php?sid=<?= $row["std_id"]; ?>" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
                             </td>
                         </tr>
 
@@ -62,7 +62,7 @@ if (isset($_SESSION["msj"])) {
 
             </tbody>
         </table>
-        <a href="index.php">Home</a>
+        <a href="../index.php">Home</a>
     </center>
 </body>
 

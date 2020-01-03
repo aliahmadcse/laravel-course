@@ -2,10 +2,10 @@
 
 session_start();
 if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
-    header("location:login.php");
+    header("location:../pages/login.php");
 }
 if (isset($_POST["sid"])) {
-    require_once "db.php";
+    require_once "../shared/db.php";
     $name = $_POST["name"];
     $father_name = $_POST["fatherName"];
     $email = $_POST["email"];
@@ -21,12 +21,12 @@ std_country='$country' WHERE std_id='$sid' ";
     $query_result = mysqli_query($conn, $query);
     if (isset($query_result)) {
         $_SESSION["msj"] = "Record Updated Successfully";
-        header("location:records.php");
+        header("location:../pages/records.php");
     } else {
         $_SESSION["msj"] = "Something wrong in updating the record";
-        header("location:records.php");
+        header("location:../pages/records.php");
     }
 } else {
     $_SESSION["msj"] = "Invalid Access";
-    header("location:records.php");
+    header("location:../pages/records.php");
 }

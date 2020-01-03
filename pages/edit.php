@@ -4,7 +4,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
     header("location:login.php");
 }
 if (isset($_GET["sid"])) {
-    require_once "db.php";
+    require_once "../shared/db.php";
     $sid = $_GET["sid"];
 
     $query = "SELECT * FROM students where std_id='$sid'";
@@ -27,7 +27,7 @@ if (isset($_GET["sid"])) {
         <body>
             <center>
                 <h1>Edit Info</h1>
-                <form action="process_edit.php" method="POST">
+                <form action="../process/process_edit.php" method="POST">
                     <table>
                         <tr>
                             <td>

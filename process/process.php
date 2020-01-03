@@ -4,7 +4,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
     header("location:login.php");
 }
 if (isset($_POST["student_form"])) {
-    require_once "db.php";
+    require_once "../shared/db.php";
     foreach ($_POST as $key => $value) {
         $$key = $value;
     }
@@ -18,12 +18,12 @@ if (isset($_POST["student_form"])) {
 
     if (isset($result)) {
         $_SESSION["msj"] = "Record Inserted Successfully";
-        header("location:index.php");
+        header("location:../index.php");
     } else {
         $_SESSION["msj"] = "Error: " . $sql . "<br />" . mysqli_error($conn);
-        header("location:index.php");
+        header("location:../index.php");
     }
 } else {
     $_SESSION["msj"] = "Invalid Access";
-    header("location:index.php");
+    header("location:../index.php");
 }

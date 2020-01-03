@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["logged_in"]) || $_SESSION['logged_in'] != "true") {
-  header("location:login.php");
+  header("location:pages/login.php");
 }
 
 if (isset($_SESSION["msj"])) {
@@ -20,7 +20,7 @@ if (isset($_SESSION["msj"])) {
 <body>
   <center>
     <h2>Registration Form</h2>
-    <form action="process.php" method="POST">
+    <form action="process/process.php" method="POST">
       <table>
         <tr>
           <td>
@@ -84,8 +84,8 @@ if (isset($_SESSION["msj"])) {
         </tr>
       </table>
     </form>
-    <a href="records.php">Records</a>|
-    <a href="process_logout.php">Logout</a>
+    <a href="pages/records.php">Records</a>|
+    <a href="process/process_logout.php">Logout</a>
   </center>
 </body>
 
