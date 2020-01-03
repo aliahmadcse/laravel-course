@@ -1,2 +1,3 @@
 # laravel-course
-My laravel course repository.
+
+My laravel course initials.
