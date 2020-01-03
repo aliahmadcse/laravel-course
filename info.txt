@@ -3,3 +3,8 @@ create=>insert a record
 retrieve=>retrieve some data from database
 update=>updating data in the database
 delete=>deleting a record in db
+
+
+Assignment
+write css for the rgistration form
+
