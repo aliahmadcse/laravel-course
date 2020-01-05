@@ -7,12 +7,15 @@ td {
     padding: 15px;
 }
 
-.login-form {
+.user-form {
     margin: 6% auto auto auto;
     background: #fff;
     width: 500px;
     height: 350px;
     box-shadow: inset 0 0 10px #000000
+}
+.sign-up-form{
+    height:410px;
 }
 
 input {
@@ -38,7 +41,7 @@ h2 {
     color: #4CAF50;
 }
 
-.sign-up-link {
+.link {
     margin: 20px;
     padding: 10px;
 }

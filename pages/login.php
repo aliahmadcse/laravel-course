@@ -34,7 +34,7 @@ session_start();
             <?php unset($_SESSION["msj_sign_up"]); ?>
         </div>
     <?php } ?>
-    <center class="login-form">
+    <center class="user-form">
         <h2>Login Page</h2>
         <form action="../process/process_login.php" method="POST">
             <table>
@@ -50,7 +50,7 @@ session_start();
                     <td colspan="2"><input type="submit" value="login" name="std_login"> </td>
                 </tr>
             </table>
-            <div class="sign-up-link">
+            <div class="link">
                 <a href="sign_up.php">Create Account</a>
             </div>
         </form>

@@ -15,6 +15,7 @@ if (isset($_SESSION["msj"])) {
 
 <head>
   <title>Registration Form</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
