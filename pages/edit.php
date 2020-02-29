@@ -80,8 +80,8 @@ if (isset($_GET["sid"])) {
                                 <select name="country">
                                     <option value="null" selected disabled>Select one option</option>
                                     <option value="pakistan" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>Pakistan</option>
-                                    <option value="china" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>China</option>
-                                    <option value="turky" <?php if ($row["std_country"] == "pakistan") { ?> selected <?php } ?>>Turky</option>
+                                    <option value="china" <?php if ($row["std_country"] == "china") { ?> selected <?php } ?>>China</option>
+                                    <option value="turky" <?php if ($row["std_country"] == "turkey") { ?> selected <?php } ?>>Turky</option>
                                 </select>
                             </td>
                         </tr>
